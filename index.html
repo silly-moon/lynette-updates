@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Lynette Updates · Custom ROMs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- COSMOS -->
+<div class="cosmos">
+  <div class="cosmos-orb orb-1"></div>
+  <div class="cosmos-orb orb-2"></div>
+  <div class="cosmos-orb orb-3"></div>
+  <div class="cosmos-blur"></div>
+  <div class="cosmos-grid"></div>
+  <div class="stars" id="stars"></div>
+  <div class="shooting-star ss-1"></div>
+  <div class="shooting-star ss-2"></div>
+  <div class="shooting-star ss-3"></div>
+</div>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-brand">
+    <div class="topbar-brand-dot"></div>
+    Lynette Updates
+  </div>
+  <div class="topbar-right">
+    <button class="icon-btn" onclick="go('donate-view')" title="Donate" aria-label="Donate">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+    </button>
+    <button class="icon-btn" onclick="go('about-view')" title="About" aria-label="About">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </button>
+    <button class="icon-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">
+      <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-8-8H2m20 0h-2m-2.93-5.07-1.41 1.41M6.34 17.66l-1.41 1.41m12.73 0-1.41-1.41M6.34 6.34 4.93 4.93"/></svg>
+      <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<div id="app">
+
+  <!-- ═══════════ HOME ═══════════ -->
+  <main id="home-view" class="view active">
+
+    <div class="home-hero anim d1">
+      <div class="home-hero-eyebrow">
+        <span class="pill pill-blue"><span class="pill-dot"></span>Live</span>
+        <span style="font-size:0.78rem;color:var(--muted);font-family:var(--font-mono);">Custom ROM Hub</span>
+      </div>
+      <h1 class="home-title">Lynette<br><span class="home-title-accent">Updates</span></h1>
+      <p class="home-desc">Premium custom Android ROM builds for the Redmi 9T &amp; 9 Power. Smooth, optimized, and beautiful.</p>
+
+      <div class="home-links">
+        <a href="https://t.me/lynette_updates" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          Channel
+        </a>
+        <a href="https://t.me/chimesupportchat" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Support Chat
+        </a>
+      </div>
+    </div>
+
+<p class="section-heading">Available ROMs</p>
+
+<div class="rom-grid">
+
+  <!-- Lunaris Card -->
+  <div class="anim d2">
+    <div class="card rom-hero" onclick="go('device-list-view')">
+      <div class="rom-hero-banner" style="background-image: url('images/Lunaris-Home.png');"></div>
+
+      <div class="rom-hero-body">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <span class="pill pill-blue"><span class="pill-dot"></span>Android 16</span>
+          <span class="pill pill-green">Stable</span>
+        </div>
+
+        <h2 class="rom-hero-title">Lunaris OS</h2>
+        <p class="rom-hero-sub">Optimized AOSP experience — speed, beauty and stability.</p>
+
+        <div class="btn btn-primary btn-sm" style="display:inline-flex; align-self: flex-start; margin-top: auto;">
+          View Builds
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Axion Card -->
+  <div class="anim d3">
+    <div class="card rom-hero" onclick="go('axion-device-list-view')">
+      <div class="rom-hero-banner" style="background-image: url('images/Axion-Home.png');"></div>
+
+      <div class="rom-hero-body">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+          <span class="pill pill-cherry"><span class="pill-dot"></span>Android 16</span>
+          <span class="pill pill-green">Stable</span>
+        </div>
+
+        <h2 class="rom-hero-title" style="background:linear-gradient(135deg,var(--axion),var(--axion2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+          Axion OS
+        </h2>
+
+        <p class="rom-hero-sub">Material Expressive design meets raw performance.</p>
+
+        <div class="btn btn-axion btn-sm" style="display:inline-flex; align-self: flex-start; margin-top: auto;">
+          View Builds
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="m5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+  </main>
+
+  <!-- ═══════════ LUNARIS DEVICE LIST ═══════════ -->
+  <main id="device-list-view" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('home-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Home</button></div>
+    <p class="page-label anim d1">Lunaris OS</p>
+    <h1 class="page-title anim d1">Supported Devices</h1>
+    <p class="page-sub anim d2">Select your device below.</p>
+
+    <div class="row-card anim d3" onclick="go('version-list-view')">
+      <img src="https://cdn.beebom.com/mobile/redmi-9-power-front-and-back2.png" alt="Redmi 9T" style="height:52px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+      <div class="row-content">
+        <div class="row-title">Redmi 9T / 9 Power</div>
+        <div class="row-meta">Xiaomi · Codename: chime</div>
+      </div>
+      <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </main>
+
+  <!-- ═══════════ LUNARIS VERSION LIST ═══════════ -->
+  <main id="version-list-view" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('device-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Devices</button></div>
+    <p class="page-label anim d1">Redmi 9T / 9 Power</p>
+    <h1 class="page-title anim d1">Select Version</h1>
+    <p class="page-sub anim d2">Newer builds are recommended.</p>
+
+    <div class="row-card anim d3" onclick="go('lunaris-39-opt')">
+      <div class="row-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      <div class="row-content">
+        <div class="row-title">v3.9 — Optimized</div>
+        <div class="row-meta" style="color:var(--accent);">Android 16 · Latest Build</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="pill pill-green" style="font-size:0.65rem;">NEW</span>
+        <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+
+    <div class="row-card anim d4" onclick="go('lunaris-39')">
+      <div class="row-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      <div class="row-content">
+        <div class="row-title">v3.9 — Initial</div>
+        <div class="row-meta">Android 16 · Older Build</div>
+      </div>
+      <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+
+    <div class="row-card anim d5" onclick="go('lunaris-38')">
+      <div class="row-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      <div class="row-content">
+        <div class="row-title">v3.8 — Stable</div>
+        <div class="row-meta">Android 16 · Stable</div>
+      </div>
+      <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </main>
+
+  <!-- ═══════════ LUNARIS v3.9 OPT ═══════════ -->
+  <main id="lunaris-39-opt" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('version-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Versions</button></div>
+
+    <div class="device-hero anim d1">
+      <div class="device-glow"></div>
+      <img src="https://cdn.beebom.com/mobile/redmi-9-power-front-and-back2.png" alt="Device" class="device-img" onerror="this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=300&auto=format&fit=crop'">
+    </div>
+
+    <div class="anim d1">
+      <p class="page-label">Lunaris OS</p>
+      <h1 class="page-title">v3.9 <span style="color:var(--accent);">Optimized</span></h1>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+        <span class="pill pill-blue"><span class="pill-dot"></span>Android 16</span>
+        <span class="pill pill-green">Latest</span>
+        <span class="pill pill-amber">April 2026</span>
+      </div>
+    </div>
+
+    <div class="anim d2" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+      <a href="https://sourceforge.net/projects/lunarisos/files/v3.9/" target="_blank" rel="noopener" class="btn btn-primary btn-full" style="padding:16px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download ROMs
+      </a>
+      <div class="dl-grid">
+        <a href="https://drive.google.com/file/d/1aVO4ofAyOBeDJr-BcQ56mq6-_oyQz9MT/view" target="_blank" rel="noopener" class="dl-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Install Tool</span></div>
+        </a>
+        <a href="https://sourceforge.net/projects/joes-android-builds/files/recovery/" target="_blank" rel="noopener" class="dl-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Manual Install</span></div>
+        </a>
+        <a href="https://xmfirmwareupdater.com/firmware/lime/stable/V14.0.5.0.SJQEUXM/" target="_blank" rel="noopener" class="dl-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+          <div class="dl-btn-inner"><span>Firmware</span><span class="dl-btn-label">Required Base</span></div>
+        </a>
+        <a href="https://bitgapps.io/" target="_blank" rel="noopener" class="dl-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3290EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <div class="dl-btn-inner"><span>BiTGApps</span><span class="dl-btn-label">Google Apps</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="card anim d3">
+      <p class="section-heading">Build Info</p>
+      <div class="info-table">
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Device</div><span class="info-val">Redmi 9T / 9 Power</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Maintainer</div><span class="info-val">Lynette</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security Patch</div><span class="info-val">April 2026</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Status</div><span class="info-val" style="color:var(--success);">Optimized</span></div>
+      </div>
+    </div>
+
+    <div class="card anim d4">
+      <div class="changelog-header">
+        <p class="section-heading" style="margin-bottom:0;flex:1;">Changelog</p>
+        <button class="toggle-btn" onclick="toggleCl('cl-39-opt',this)"><span>Show</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      </div>
+      <div class="changelog-wrap" id="cl-39-opt">
+        <div class="changelog-inner">
+          <ul class="changelog-list">
+            <li><strong>Performance:</strong> Massive lag fixes and UI optimizations for smoother usage</li>
+            <li><strong>System:</strong> Under-the-hood performance enhancements and stability improvements</li>
+            <li><strong>UI:</strong> Allow choose custom color/gradient for clock chip</li>
+            <li><strong>UI:</strong> Media chip popup follow qs seekbar style</li>
+            <li><strong>UI:</strong> Vol. percentage in redesigned style</li>
+            <li><strong>System:</strong> Add basic sleep mode</li>
+            <li><strong>UI:</strong> Allow switch to legacy statusbar icon order</li>
+            <li><strong>Security:</strong> Implement proper UI for per-app spoofing</li>
+            <li><strong>UI:</strong> Add battery indicator, glow effect, music indicator in notch ring</li>
+            <li><strong>Launcher:</strong> Allow changes launcher hotseat QSB style</li>
+            <li><strong>Launcher:</strong> Introduce appdrawer app & searchbar styles</li>
+            <li><strong>Launcher:</strong> Add option to clear home screen in settings</li>
+            <li><strong>System:</strong> Add idle manager (like greenify)</li>
+            <li><strong>Launcher:</strong> Allow set custom color in app drawer bg</li>
+            <li><strong>Security:</strong> Add method to block PairIP license check activity</li>
+            <li><strong>System:</strong> Add torch toggle for double tap power gesture</li>
+            <li><strong>Telephony:</strong> Implement new dynamic VoLTE/VoWiFi and VoNR status bar icons</li>
+            <li><strong>System:</strong> Allow disable flash SMS messages</li>
+            <li><strong>UI:</strong> Add classic a11 like QS panel style</li>
+            <li><strong>UI:</strong> Add 24 new clock style and many improvements</li>
+            <li><strong>UI:</strong> Lockscreen widget improvements</li>
+            <li><strong>UI:</strong> Add lockscreen now playing popup dialog</li>
+            <li><strong>System:</strong> Enable bubble notification app</li>
+            <li><strong>UI:</strong> Allow disable qs media player</li>
+            <li><strong>Launcher:</strong> Introduce navbar pill auto-hide (launcher3 only)</li>
+            <li><strong>Performance:</strong> Improve app scrolling & lmo freeform app scrolling</li>
+            <li><strong>Fixes:</strong> Many UI related bugfixes</li>
+            <li><strong>Core:</strong> Merge arm-optimization changes</li>
+            <li><strong>Core:</strong> Merge lineage changes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card anim d5">
+      <p class="section-heading">Installation</p>
+      <div class="warn-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <div><strong>Warning</strong>Clean flash is mandatory if coming from Android 15 or another ROM.</div>
+      </div>
+      <div class="install-steps">
+        <div class="install-step"><div class="step-num">01</div>Use the recommended OrangeFox recovery.</div>
+        <div class="install-step"><div class="step-num">02</div>Flash BiTGApps separately for Vanilla variant.</div>
+        <div class="install-step"><div class="step-num">03</div>First boot may take 5–10 minutes. Do not interrupt.</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════ LUNARIS v3.9 INITIAL ═══════════ -->
+  <main id="lunaris-39" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('version-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Versions</button></div>
+
+    <div class="device-hero anim d1">
+      <div class="device-glow"></div>
+      <img src="https://cdn.beebom.com/mobile/redmi-9-power-front-and-back2.png" alt="Device" class="device-img" onerror="this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=300&auto=format&fit=crop'">
+    </div>
+
+    <div class="anim d1">
+      <p class="page-label">Lunaris OS</p>
+      <h1 class="page-title">v3.9 <span style="color:var(--muted2);">Initial</span></h1>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+        <span class="pill pill-blue"><span class="pill-dot"></span>Android 16</span>
+        <span class="pill pill-amber">April 2026</span>
+      </div>
+    </div>
+
+    <div class="anim d2" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <a href="https://drive.google.com/file/d/1J9IBXtGpVSgZgr4TdKDPwETt7fo1l8nz/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary" style="padding:15px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          GMS
+        </a>
+        <a href="https://drive.google.com/file/d/1_mSlFvlBF-qw16KFt7Le4OGu8OUJ2X7B/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:15px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Vanilla
+        </a>
+      </div>
+      <div class="dl-grid">
+        <a href="https://drive.google.com/file/d/1aVO4ofAyOBeDJr-BcQ56mq6-_oyQz9MT/view" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Install Tool</span></div></a>
+        <a href="https://sourceforge.net/projects/joes-android-builds/files/recovery/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Manual Install</span></div></a>
+        <a href="https://xmfirmwareupdater.com/firmware/lime/stable/V14.0.5.0.SJQEUXM/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg><div class="dl-btn-inner"><span>Firmware</span><span class="dl-btn-label">Required Base</span></div></a>
+        <a href="https://bitgapps.io/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3290EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><div class="dl-btn-inner"><span>BiTGApps</span><span class="dl-btn-label">Google Apps</span></div></a>
+      </div>
+    </div>
+
+    <div class="card anim d3">
+      <p class="section-heading">Build Info</p>
+      <div class="info-table">
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Device</div><span class="info-val">Redmi 9T / 9 Power</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Maintainer</div><span class="info-val">Lynette</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security Patch</div><span class="info-val">April 2026</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Status</div><span class="info-val" style="color:var(--muted2);">Initial</span></div>
+      </div>
+    </div>
+
+    <div class="card anim d4">
+      <div class="changelog-header">
+        <p class="section-heading" style="margin-bottom:0;flex:1;">Changelog</p>
+        <button class="toggle-btn" onclick="toggleCl('cl-39',this)"><span>Show</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      </div>
+      <div class="changelog-wrap" id="cl-39">
+        <div class="changelog-inner">
+          <ul class="changelog-list">
+            <li><strong>UI:</strong> Allow choose custom color/gradient for clock chip</li>
+            <li><strong>UI:</strong> Media chip popup follow qs seekbar style</li>
+            <li><strong>UI:</strong> Vol. percentage in redesigned style</li>
+            <li><strong>System:</strong> Add basic sleep mode</li>
+            <li><strong>UI:</strong> Allow switch to legacy statusbar icon order</li>
+            <li><strong>Security:</strong> Implement proper UI for per-app spoofing</li>
+            <li><strong>UI:</strong> Add battery indicator, glow effect, music indicator in notch ring</li>
+            <li><strong>Launcher:</strong> Allow changes launcher hotseat QSB style</li>
+            <li><strong>Launcher:</strong> Introduce appdrawer app & searchbar styles</li>
+            <li><strong>Launcher:</strong> Add option to clear home screen in settings</li>
+            <li><strong>System:</strong> Add idle manager (like greenify)</li>
+            <li><strong>Launcher:</strong> Allow set custom color in app drawer bg</li>
+            <li><strong>Security:</strong> Add method to block PairIP license check activity</li>
+            <li><strong>System:</strong> Add torch toggle for double tap power gesture</li>
+            <li><strong>Telephony:</strong> Implement new dynamic VoLTE/VoWiFi and VoNR status bar icons</li>
+            <li><strong>System:</strong> Allow disable flash SMS messages</li>
+            <li><strong>UI:</strong> Add classic a11 like QS panel style</li>
+            <li><strong>UI:</strong> Add 24 new clock style and many improvements</li>
+            <li><strong>UI:</strong> Lockscreen widget improvements</li>
+            <li><strong>UI:</strong> Add lockscreen now playing popup dialog</li>
+            <li><strong>System:</strong> Enable bubble notification app</li>
+            <li><strong>UI:</strong> Allow disable qs media player</li>
+            <li><strong>Launcher:</strong> Introduce navbar pill auto-hide (launcher3 only)</li>
+            <li><strong>Performance:</strong> Improve app scrolling & lmo freeform app scrolling</li>
+            <li><strong>Fixes:</strong> Many UI related bugfixes</li>
+            <li><strong>Core:</strong> Merge arm-optimization & lineage changes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card anim d5">
+      <p class="section-heading">Installation</p>
+      <div class="warn-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <div><strong>Warning</strong>Clean flash is mandatory if coming from Android 15 or another ROM.</div>
+      </div>
+      <div class="install-steps">
+        <div class="install-step"><div class="step-num">01</div>Use the recommended OrangeFox recovery.</div>
+        <div class="install-step"><div class="step-num">02</div>Flash BiTGApps separately for Vanilla variant.</div>
+        <div class="install-step"><div class="step-num">03</div>First boot may take 5–10 minutes. Do not interrupt.</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════ LUNARIS v3.8 ═══════════ -->
+  <main id="lunaris-38" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('version-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Versions</button></div>
+
+    <div class="device-hero anim d1">
+      <div class="device-glow"></div>
+      <img src="https://cdn.beebom.com/mobile/redmi-9-power-front-and-back2.png" alt="Device" class="device-img" onerror="this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=300&auto=format&fit=crop'">
+    </div>
+
+    <div class="anim d1">
+      <p class="page-label">Lunaris OS</p>
+      <h1 class="page-title">v3.8 <span style="color:var(--success);">Stable</span></h1>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+        <span class="pill pill-blue"><span class="pill-dot"></span>Android 16</span>
+        <span class="pill pill-green">Stable</span>
+        <span class="pill pill-amber">March 2026</span>
+      </div>
+    </div>
+
+    <div class="anim d2" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+      <a href="https://sourceforge.net/projects/lunarisos/files/v3.8/" target="_blank" rel="noopener" class="btn btn-primary btn-full" style="padding:16px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download ROM
+      </a>
+      <div class="dl-grid">
+        <a href="https://drive.google.com/file/d/1aVO4ofAyOBeDJr-BcQ56mq6-_oyQz9MT/view" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Install Tool</span></div></a>
+        <a href="https://sourceforge.net/projects/joes-android-builds/files/recovery/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Manual Install</span></div></a>
+        <a href="https://xmfirmwareupdater.com/firmware/lime/stable/V14.0.5.0.SJQEUXM/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg><div class="dl-btn-inner"><span>Firmware</span><span class="dl-btn-label">Required Base</span></div></a>
+        <a href="https://bitgapps.io/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3290EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><div class="dl-btn-inner"><span>BiTGApps</span><span class="dl-btn-label">Google Apps</span></div></a>
+      </div>
+    </div>
+
+    <div class="card anim d3">
+      <p class="section-heading">Build Info</p>
+      <div class="info-table">
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Device</div><span class="info-val">Redmi 9T / 9 Power</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Maintainer</div><span class="info-val">Lynette</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security Patch</div><span class="info-val">March 2026</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Status</div><span class="info-val" style="color:var(--success);">Stable</span></div>
+      </div>
+    </div>
+
+    <div class="card anim d4">
+      <div class="changelog-header">
+        <p class="section-heading" style="margin-bottom:0;flex:1;">Changelog</p>
+        <button class="toggle-btn" onclick="toggleCl('cl-38',this)"><span>Show</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      </div>
+      <div class="changelog-wrap" id="cl-38">
+        <div class="changelog-inner">
+          <ul class="changelog-list">
+            <li><strong>System:</strong> Add basic sleep mode</li>
+            <li><strong>UI:</strong> Allow switch to legacy statusbar icon order</li>
+            <li><strong>Security:</strong> Implement proper UI for per-app spoofing</li>
+            <li><strong>UI:</strong> Add battery indicator in notch ring</li>
+            <li><strong>Launcher:</strong> Allow changes launcher hotseat QSB style</li>
+            <li><strong>UI:</strong> Hide ongoing action chip while QS panel is expanded</li>
+            <li><strong>Fixes:</strong> Fix hide developer mode search list crash</li>
+            <li><strong>Fixes:</strong> Fix backup settings crash</li>
+            <li><strong>Launcher:</strong> Add appdrawer searchbar location</li>
+            <li><strong>UI:</strong> Dark text on appdrawer toggle</li>
+            <li><strong>Launcher:</strong> Introduce appdrawer styles</li>
+            <li><strong>Launcher:</strong> Add option to clear home screen in settings</li>
+            <li><strong>Fixes:</strong> Fix footer settings long press crash</li>
+            <li><strong>System:</strong> Remove duplicate settings entries</li>
+            <li><strong>UI:</strong> Music progress ring in notch ring</li>
+            <li><strong>System:</strong> Add idle manager (like greenify)</li>
+            <li><strong>Launcher:</strong> Allow custom color in app drawer background</li>
+            <li><strong>UI:</strong> Allow custom clock size</li>
+            <li><strong>UI:</strong> Improve legacy recent action style padding</li>
+            <li><strong>System:</strong> Update smartspace</li>
+            <li><strong>Security:</strong> Block PairIP license check activity</li>
+            <li><strong>Fixes:</strong> Fix TEE check</li>
+            <li><strong>System:</strong> Add torch toggle for double tap power</li>
+            <li><strong>Telephony:</strong> Dynamic VoLTE/VoWiFi status bar icons</li>
+            <li><strong>Telephony:</strong> Dynamic VoNR status bar icons</li>
+            <li><strong>System:</strong> Allow disabling flash SMS messages</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card anim d5">
+      <p class="section-heading">Installation</p>
+      <div class="warn-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <div><strong>Warning</strong>Clean flash is mandatory if coming from Android 15 or another ROM.</div>
+      </div>
+      <div class="install-steps">
+        <div class="install-step"><div class="step-num">01</div>Use the recommended OrangeFox recovery.</div>
+        <div class="install-step"><div class="step-num">02</div>Flash BiTGApps separately for Vanilla variant.</div>
+        <div class="install-step"><div class="step-num">03</div>First boot may take 5–10 minutes. Do not interrupt.</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════ AXION DEVICE LIST ═══════════ -->
+  <main id="axion-device-list-view" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('home-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Home</button></div>
+    <p class="page-label anim d1" style="color:var(--axion);">Axion OS</p>
+    <h1 class="page-title anim d1">Supported Devices</h1>
+    <p class="page-sub anim d2">Select your device below.</p>
+
+    <div class="row-card axion-card anim d3" onclick="go('axion-version-list-view')">
+      <img src="https://cdn.beebom.com/mobile/redmi-9-power-front-and-back2.png" alt="Redmi 9T" style="height:52px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+      <div class="row-content">
+        <div class="row-title">Redmi 9T / 9 Power</div>
+        <div class="row-meta">Xiaomi · Codename: chime</div>
+      </div>
+      <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </main>
+
+  <!-- ═══════════ AXION VERSION LIST ═══════════ -->
+  <main id="axion-version-list-view" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('axion-device-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Devices</button></div>
+    <p class="page-label anim d1" style="color:var(--axion);">Redmi 9T / 9 Power</p>
+    <h1 class="page-title anim d1">Select Version</h1>
+    <p class="page-sub anim d2">Stable builds recommended.</p>
+
+    <div class="row-card axion-card anim d3" onclick="go('axion-reverie')">
+      <div class="row-icon" style="border-color:rgba(255, 71, 126, 0.2);background:rgba(255, 71, 126, 0.08);color:var(--axion);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      <div class="row-content">
+        <div class="row-title">v2.5 — REVERIE</div>
+        <div class="row-meta" style="color:var(--axion);">Android 16 · Stable</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="pill pill-green" style="font-size:0.65rem;">STABLE</span>
+        <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+
+    <div class="row-card axion-card anim d4" onclick="go('axion-beta')">
+      <div class="row-icon" style="border-color:rgba(255, 71, 126, 0.2);background:rgba(255, 71, 126, 0.08);color:var(--axion);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+      <div class="row-content">
+        <div class="row-title">v2.5 — BETA REVERIE</div>
+        <div class="row-meta">Android 16 · Beta</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="pill pill-amber" style="font-size:0.65rem;">BETA</span>
+        <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════ AXION REVERIE ═══════════ -->
+  <main id="axion-reverie" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('axion-version-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Versions</button></div>
+
+    <div class="device-hero anim d1">
+      <div class="device-glow axion-glow"></div>
+      <img src="https://cdn.beebom.com/mobile/redmi-9-power-front-and-back2.png" alt="Device" class="device-img" onerror="this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=300&auto=format&fit=crop'">
+    </div>
+
+    <div class="anim d1">
+      <p class="page-label" style="color:var(--axion);">Axion OS</p>
+      <h1 class="page-title" style="background:linear-gradient(135deg,var(--axion),var(--axion2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">v2.5 REVERIE</h1>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+        <span class="pill pill-cherry"><span class="pill-dot"></span>Android 16</span>
+        <span class="pill pill-green">Stable</span>
+        <span class="pill pill-amber">March 2026</span>
+      </div>
+    </div>
+
+    <div class="anim d2" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+      <a href="https://sourceforge.net/projects/axionos-chime/files/v2.5%20REVERIE/" target="_blank" rel="noopener" class="btn btn-axion btn-full" style="padding:16px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download ROMs
+      </a>
+      <div class="dl-grid">
+        <a href="https://drive.google.com/file/d/1aVO4ofAyOBeDJr-BcQ56mq6-_oyQz9MT/view" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Install Tool</span></div></a>
+        <a href="https://sourceforge.net/projects/joes-android-builds/files/recovery/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Manual Install</span></div></a>
+        <a href="https://xmfirmwareupdater.com/firmware/lime/stable/V14.0.5.0.SJQEUXM/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg><div class="dl-btn-inner"><span>Firmware</span><span class="dl-btn-label">Required Base</span></div></a>
+        <a href="https://bitgapps.io/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3290EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><div class="dl-btn-inner"><span>BiTGApps</span><span class="dl-btn-label">Google Apps</span></div></a>
+      </div>
+    </div>
+
+    <div class="card anim d3">
+      <p class="section-heading">Build Info</p>
+      <div class="info-table">
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Device</div><span class="info-val">Redmi 9T / 9 Power</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Maintainer</div><span class="info-val">Lynette</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security Patch</div><span class="info-val">March 2026</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Status</div><span class="info-val" style="color:var(--success);">Stable</span></div>
+      </div>
+    </div>
+
+    <div class="card anim d4">
+      <div class="changelog-header">
+        <p class="section-heading" style="margin-bottom:0;flex:1;">Changelog</p>
+        <button class="toggle-btn" onclick="toggleCl('cl-axion-rev',this)"><span>Show</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      </div>
+      <div class="changelog-wrap" id="cl-axion-rev">
+        <div class="changelog-inner">
+          <ul class="changelog-list axion-cl">
+            <li><strong>System:</strong> AxionOS Easter egg (ctto: Saikrishna1504)</li>
+            <li><strong>Display:</strong> AxPcMode: Secondary display support, turn off main display while projecting</li>
+            <li><strong>Display:</strong> AxBravia Engine: Port of Bravia Engine utilizing patterns from Sony research</li>
+            <li><strong>UI:</strong> AxDynamic Bar: Shows important events (music/now playing/sports)</li>
+            <li><strong>Launcher:</strong> AxQuickLook: Our own version of Smartspace</li>
+            <li><strong>Customization:</strong> AxWallpaperEffects: New wallpaper effects (ctto: Saad Ullah Khan)</li>
+            <li><strong>Audio:</strong> Introducing AxionFx Audio Engine and Routines</li>
+            <li><strong>UI:</strong> Improved OmniJaws Weather App UI and Lockscreen Widgets</li>
+            <li><strong>Customization:</strong> New Lockscreen Clocks and improved customizations</li>
+            <li><strong>UI:</strong> New Internet Dialog Data Usage Dashboard</li>
+            <li><strong>Security:</strong> New Essential Notifications UI and Private Space UI</li>
+            <li><strong>Security:</strong> Custom ROM hide feature: Blocks root/custom rom detections</li>
+            <li><strong>Launcher:</strong> Pulse Launcher UI: Lock recents app, new folder icon support</li>
+            <li><strong>Launcher:</strong> App Drawer: New UI bringing Material Expressive design</li>
+            <li><strong>Theme:</strong> Axion UI Redesign: Material 3 Expressive integration</li>
+            <li><strong>Performance:</strong> Ax Burst Engine: OEM strategies for smoother performance</li>
+            <li><strong>System:</strong> Smoother QS expansion and efficient background CPU handling</li>
+            <li><strong>Performance:</strong> Reviving zlib-ng and bringing jemalloc optimization</li>
+            <li><strong>Network:</strong> New Advanced Tethering Options and Sandbox Features</li>
+            <li><strong>UI:</strong> Font Overriding & Rendering: Fixed font weight issues</li>
+            <li><strong>UI:</strong> New Sidebar UI and USB BottomSheet UI</li>
+            <li><strong>Gaming:</strong> Redefined GameSpace: New GameHub and tiles UI</li>
+            <li><strong>System:</strong> Quick Settings Reorder System</li>
+            <li><strong>UI:</strong> Status Bar Tuner: Added more icons, Privacy Indicator Toggles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card anim d5">
+      <p class="section-heading">Installation</p>
+      <div class="warn-box" style="background:rgba(255, 71, 126, 0.08);border-color:rgba(255, 71, 126, 0.2);color:var(--axion);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        <div><strong>Warning</strong>Clean flash is mandatory if coming from Android 15 or another ROM.</div>
+      </div>
+      <div class="install-steps">
+        <div class="install-step"><div class="step-num" style="color:var(--axion);">01</div>Use the recommended OrangeFox recovery.</div>
+        <div class="install-step"><div class="step-num" style="color:var(--axion);">02</div>Flash BiTGApps separately for Vanilla variant.</div>
+        <div class="install-step"><div class="step-num" style="color:var(--axion);">03</div>First boot may take 5–10 minutes. Do not interrupt.</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════ AXION BETA ═══════════ -->
+  <main id="axion-beta" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('axion-version-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Versions</button></div>
+
+    <div class="device-hero anim d1">
+      <div class="device-glow axion-glow"></div>
+      <img src="https://cdn.beebom.com/mobile/redmi-9-power-front-and-back2.png" alt="Device" class="device-img" onerror="this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=300&auto=format&fit=crop'">
+    </div>
+
+    <div class="anim d1">
+      <p class="page-label" style="color:var(--axion);">Axion OS</p>
+      <h1 class="page-title" style="background:linear-gradient(135deg,var(--axion),var(--axion2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">v2.5 BETA</h1>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+        <span class="pill pill-cherry"><span class="pill-dot"></span>Android 16</span>
+        <span class="pill pill-amber">BETA</span>
+        <span class="pill pill-amber">March 2026</span>
+      </div>
+    </div>
+
+    <div class="anim d2" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <a href="https://sourceforge.net/projects/axionos-chime/files/v2.5%20BETA/axion-2.5-BETA-20260405-UNOFFICIAL-GMS-chime.zip/download" target="_blank" rel="noopener" class="btn btn-axion" style="padding:15px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          GMS
+        </a>
+        <a href="https://sourceforge.net/projects/axionos-chime/files/v2.5%20BETA/axion-2.5-BETA-20260404-UNOFFICIAL-VANILLA-chime.zip/download" target="_blank" rel="noopener" class="btn btn-ghost" style="padding:15px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Vanilla
+        </a>
+      </div>
+      <div class="dl-grid">
+        <a href="https://drive.google.com/file/d/1aVO4ofAyOBeDJr-BcQ56mq6-_oyQz9MT/view" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Install Tool</span></div></a>
+        <a href="https://sourceforge.net/projects/joes-android-builds/files/recovery/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div class="dl-btn-inner"><span>Recovery</span><span class="dl-btn-label">Manual Install</span></div></a>
+        <a href="https://xmfirmwareupdater.com/firmware/lime/stable/V14.0.5.0.SJQEUXM/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg><div class="dl-btn-inner"><span>Firmware</span><span class="dl-btn-label">Required Base</span></div></a>
+        <a href="https://bitgapps.io/" target="_blank" rel="noopener" class="dl-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3290EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><div class="dl-btn-inner"><span>BiTGApps</span><span class="dl-btn-label">Google Apps</span></div></a>
+      </div>
+    </div>
+
+    <div class="card anim d3">
+      <p class="section-heading">Build Info</p>
+      <div class="info-table">
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Device</div><span class="info-val">Redmi 9T / 9 Power</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Maintainer</div><span class="info-val">Lynette</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security Patch</div><span class="info-val">March 2026</span></div>
+        <div class="info-row"><div class="info-key"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Status</div><span class="info-val" style="color:var(--warn);">BETA</span></div>
+      </div>
+    </div>
+
+    <div class="card anim d4">
+      <div class="changelog-header">
+        <p class="section-heading" style="margin-bottom:0;flex:1;">Changelog</p>
+        <button class="toggle-btn" onclick="toggleCl('cl-axion-beta',this)"><span>Show</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+      </div>
+      <div class="changelog-wrap" id="cl-axion-beta">
+        <div class="changelog-inner">
+          <ul class="changelog-list axion-cl">
+            <li><strong>System:</strong> AxionOS Easter egg (ctto: Saikrishna1504)</li>
+            <li><strong>Display:</strong> AxPcMode: Secondary display support, turn off main display while projecting</li>
+            <li><strong>Display:</strong> AxBravia Engine: Port of Bravia Engine utilizing patterns from Sony research</li>
+            <li><strong>UI:</strong> AxDynamic Bar: Shows important events (music/now playing/sports)</li>
+            <li><strong>Launcher:</strong> AxQuickLook: Our own version of Smartspace</li>
+            <li><strong>Customization:</strong> AxWallpaperEffects: New wallpaper effects (ctto: Saad Ullah Khan)</li>
+            <li><strong>Audio:</strong> Introducing AxionFx Audio Engine and Routines</li>
+            <li><strong>UI:</strong> Improved OmniJaws Weather App UI and Lockscreen Widgets</li>
+            <li><strong>Customization:</strong> New Lockscreen Clocks and depth wallpaper effect</li>
+            <li><strong>UI:</strong> New Internet Dialog Data Usage Dashboard</li>
+            <li><strong>Security:</strong> New Essential Notifications UI and Private Space UI</li>
+            <li><strong>Security:</strong> Custom ROM hide feature: Blocks root/custom rom detections</li>
+            <li><strong>Launcher:</strong> Pulse Launcher UI: Lock recents app, new folder icon support</li>
+            <li><strong>Launcher:</strong> App Drawer: New UI bringing Material Expressive design</li>
+            <li><strong>Theme:</strong> Axion UI Redesign: Material 3 Expressive integration</li>
+            <li><strong>Performance:</strong> Ax Burst Engine: OEM strategies for smoother performance</li>
+            <li><strong>System:</strong> Smoother QS expansion and efficient background CPU handling</li>
+            <li><strong>Performance:</strong> Reviving zlib-ng and bringing jemalloc optimization</li>
+            <li><strong>Network:</strong> New Advanced Tethering Options and Sandbox Features</li>
+            <li><strong>UI:</strong> Font Overriding & Rendering: Fixed font weight issues</li>
+            <li><strong>UI:</strong> New Sidebar UI and USB BottomSheet UI</li>
+            <li><strong>Gaming:</strong> Redefined GameSpace: New GameHub and tiles UI</li>
+            <li><strong>System:</strong> Quick Settings Reorder System</li>
+            <li><strong>UI:</strong> Status Bar Tuner: Added more icons, Privacy Indicator Toggles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card anim d5">
+      <p class="section-heading">Installation</p>
+      <div class="warn-box" style="background:rgba(251,191,36,0.06);border-color:rgba(251,191,36,0.2);color:var(--warn);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div><strong>BETA Build</strong>This is a beta build. Expect some minor bugs. Clean flash is mandatory.</div>
+      </div>
+      <div class="install-steps">
+        <div class="install-step"><div class="step-num" style="color:var(--axion);">01</div>Use the recommended OrangeFox recovery.</div>
+        <div class="install-step"><div class="step-num" style="color:var(--axion);">02</div>Flash BiTGApps separately for Vanilla variant.</div>
+        <div class="install-step"><div class="step-num" style="color:var(--axion);">03</div>First boot may take 5–10 minutes. Do not interrupt.</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════ DONATE ═══════════ -->
+  <main id="donate-view" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('home-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back</button></div>
+    <p class="page-label anim d1">Support</p>
+    <h1 class="page-title anim d1">Buy Me a Coffee</h1>
+    <p class="page-sub anim d2">If you enjoy these builds, a small donation keeps the servers alive and the motivation high. 🙏</p>
+
+    <div class="anim d3">
+      <a href="https://buymeacoffee.com/lynettethecat" target="_blank" rel="noopener" class="donate-option">
+        <div class="donate-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;margin-bottom:3px;">Buy Me a Coffee</div>
+          <div style="font-size:0.82rem;color:var(--muted);">buymeacoffee.com/lynettethecat</div>
+        </div>
+        <svg style="margin-left:auto;color:var(--muted);" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+
+      <a href="https://lynettethecat.mojo.page/lynette-the-cat" target="_blank" rel="noopener" class="donate-option">
+        <div class="donate-icon" style="background:rgba(52,211,153,0.12);color:#34d399;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;margin-bottom:3px;">Send a Treat</div>
+          <div style="font-size:0.82rem;color:var(--muted);">mojo.page · Lynette the Cat</div>
+        </div>
+        <svg style="margin-left:auto;color:var(--muted);" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <main id="about-view" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('home-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Back</button></div>
+    <p class="page-label anim d1">About</p>
+    <h1 class="page-title anim d1">The Developer</h1>
+
+    <div class="card anim d2">
+      <div class="avatar">
+        <img src="https://github.com/silly-moon.png" alt="silly-moon" onerror="this.src='https://avatars.githubusercontent.com/u/0'">
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:4px;">silly-moon</h2>
+      <p style="color:var(--accent);font-family:var(--font-mono);font-size:0.82rem;margin-bottom:16px;">@LynetteTheCat</p>
+      <p style="color:var(--muted2);font-size:0.9rem;line-height:1.7;">
+        Passionate Android developer and custom ROM maintainer for the <strong style="color:var(--text);">Redmi 9T / 9 Power (chime)</strong>. Focused on delivering smooth, optimized, and visually stunning experiences through builds like LunarisOS and AxionOS.
+      </p>
+
+      <div class="social-links">
+        <a href="https://github.com/silly-moon" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://t.me/lynettethecat" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          Telegram
+        </a>
+        <a href="https://www.youtube.com/@LynetteTheCatOfficial" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          YouTube
+        </a>
+        <a href="https://www.youtube.com/@LynetteTheCat" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          YT (Alt)
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="anim d4">© 2026 Lynette Updates · Built with ♥</footer>
+
+</div><!-- /app -->
+<script src="script.js"></script>
+</body>
+</html>
