@@ -337,19 +337,46 @@ body::before {
   gap: 10px;
 }
 
-.icon-btn {
-  width: 40px; height: 40px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--muted2);
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  transition: var(--transition);
-  user-select: none;
+.icon-btn{
+  width:44px;
+  height:44px;
+
+  border-radius:14px;
+
+  border:1px solid var(--border);
+  background:var(--surface);
+
+  color:var(--muted2);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+  transition:var(--transition);
+
+  user-select:none;
+
+  flex-shrink:0;
 }
-.icon-btn:hover { border-color: var(--border2); color: var(--text); background: var(--surface2); }
-.icon-btn:active { transform: scale(0.92); }
+
+.icon-btn svg{
+  width:18px;
+  height:18px;
+
+  display:block;
+  flex-shrink:0;
+}
+
+.icon-btn:hover{
+  border-color:var(--border2);
+  color:var(--text);
+  background:var(--surface2);
+}
+
+.icon-btn:active{
+  transform:scale(0.92);
+}
 
 /* ═══════════════════════════════════════
    BACK BUTTON
