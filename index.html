@@ -220,8 +220,54 @@
       </div>
       <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
     </div>
-  </main>
 
+    <div class="row-card anim d4" onclick="go('rosemary-version-list-view')">
+      <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666350336.46755940.png" alt="Redmi Note 10S" style="height:52px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+      <div class="row-content">
+        <div class="row-title">Redmi Note 10S</div>
+        <div class="row-meta">Xiaomi · Codename: rosemary</div>
+      </div>
+      <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </main>
+<main id="rosemary-version-list-view" class="view">
+    <div class="back-row anim">
+      <button class="btn-back" onclick="go('device-list-view')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+        Devices
+      </button>
+    </div>
+
+    <p class="page-label anim d1">Lunaris OS</p>
+    <h1 class="page-title anim d1">Select Version</h1>
+    <p class="page-sub anim d2">Newer builds are recommended.</p>
+
+    
+
+    <div class="row-card anim d4" onclick="go('lunaris-rosemary-latest')">
+      <div class="row-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+      </div>
+
+      <div class="row-content">
+        <div class="row-title">v3.11 — Stable</div>
+        <div class="row-meta" style="color:var(--accent);">
+          Android 16 · Latest Build
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:10px;margin-left:auto;">
+        <span class="pill pill-green" style="font-size:0.65rem;">NEW</span>
+        <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m9 18 6-6-6-6"/>
+        </svg>
+      </div>
+    </div>
+  </main>
   <!-- ═══════════ LUNARIS VERSION LIST ═══════════ -->
   <main id="version-list-view" class="view">
     <div class="back-row anim"><button class="btn-back" onclick="go('device-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Devices</button></div>
@@ -336,6 +382,211 @@
       <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
     </div>
   </main>
+
+  <!-- ═══════════ LUNARIS ROSEMARY LATEST ═══════════ -->
+<main id="lunaris-rosemary-latest" class="view">
+  <div class="back-row anim"><button class="btn-back" onclick="go('rosemary-version-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Versions</button></div>
+
+  <div class="device-hero anim d1">
+    <div class="device-glow"></div>
+    <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666350336.46755940.png" alt="Device" class="device-img" onerror="this.src='https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=300&auto=format&fit=crop'">
+  </div>
+
+  <div class="anim d1">
+    <p class="page-label">Lunaris OS</p>
+
+    <h1 class="page-title">v3.11 — Stable</h1>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+      <span class="pill pill-blue"><span class="pill-dot"></span>Android 16</span>
+      <span class="pill pill-green">Latest</span>
+    </div>
+  </div>
+
+  <div class="anim d2" style="display:flex;flex-direction:column;gap:16px;margin-bottom:24px;">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+      <a href="https://sourceforge.net/projects/rosemarybuilds/files/LunarisOS/"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-primary"
+        style="padding:16px;">
+
+        GMS Build
+      </a>
+
+      <a href="https://sourceforge.net/projects/rosemarybuilds/files/LunarisOS/"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-ghost"
+        style="padding:16px;">
+
+        Vanilla Build
+      </a>
+
+    </div>
+
+    <div class="dl-grid">
+
+      <a href="https://github.com/Mnskkyy/recovery_device_xiaomi_rosemary/releases/tag/PBRP-rosemary"
+        target="_blank"
+        rel="noopener"
+        class="dl-btn">
+
+        <svg width="16" height="16" viewBox="0 0 24 24"
+          fill="none"
+          stroke="#fbbf24"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+        </svg>
+
+        <div class="dl-btn-inner">
+          <span>Recovery (PBRP)</span>
+          <span class="dl-btn-label">Recommended</span>
+        </div>
+      </a>
+
+      <a href="https://bitgapps.io/"
+        target="_blank"
+        rel="noopener"
+        class="dl-btn">
+
+        <svg width="16" height="16" viewBox="0 0 24 24"
+          fill="none"
+          stroke="#3290EE"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+
+        <div class="dl-btn-inner">
+          <span>BiTGApps</span>
+          <span class="dl-btn-label">Google Apps</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="card anim d3">
+    <p class="section-heading">Build Info</p>
+
+    <div class="info-table">
+
+      <div class="info-row">
+        <div class="info-key">Device</div>
+        <span class="info-val">Redmi Note 10S</span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-key">Maintainer</div>
+        <span class="info-val">Lynette</span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-key">Security Patch</div>
+        <span class="info-val">June 2026</span>
+      </div>
+
+      <div class="info-row">
+        <div class="info-key">Status</div>
+        <span class="info-val" style="color:var(--success);">Stable</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card anim d4">
+
+    <div class="changelog-header">
+
+      <p class="section-heading" style="margin-bottom:0;flex:1;">
+        Changelog
+      </p>
+
+      <button class="toggle-btn" onclick="toggleCl('cl-rosemary-latest',this)">
+        <span>Show</span>
+
+        <svg width="14" height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <div class="changelog-wrap" id="cl-rosemary-latest">
+
+      <div class="changelog-inner">
+
+        <ul class="changelog-list">
+          <li> Fix clock color not resetting when media playback stops</li>
+          <li> Add clock style wobble charging animation</li>
+          <li> Re-add notification and call event in dynamic bar</li>
+          <li> Fix sporadic jumps in statusbar brightness control</li>
+          <li> Boost clock style album art color saturation</li>
+          <li> Fix notification click for center-aligned mode</li>
+          <li> Fix percentage not showing properly for call/voice stream in redesigned mode</li>
+          <li> Fix nowplaying visibility flicker and show logic</li>
+          <li> Fix nowplaying seek bar position desync on overlay open</li>
+          <li> Ensure locked app stay locked even after swipe manually</li>
+          <li> Launcher hotseat compact searchbar style</li>
+          <li> Add haptic feedback in Power menu</li>
+          <li> Add album art color mode in nowplaying</li>
+          <li> Exempt QS expansion from keyguard behind scrim visibility</li>
+          <li> Add hold option to open apps in bubble from sidebar</li>
+          <li> Nuke backup pref from settings homepage</li>
+          <li> Redesign app drawer searchbar design like pixel launcher</li>
+          <li> Make launcher navbar burn-in toggleable</li>
+          <li> Make lock gesture toggleable</li>
+          <li> Add toggle to disable recent scroll vibration</li>
+          <li> Add fullscreen mode in sidebar launch-mode popup</li>
+          <li> Add Bottom Fade options for depth wallpaper subject Layer</li>
+          <li> Fix Pixel Launcher unlock animation</li>
+          <li> Remove broken Launcher3 unlock animation</li>
+          <li> Increase launcher3 hotseat qsb space</li>
+          <li> Add kill-app action in dynamic bar recents chip</li>
+          <li> Fix activity transition hang issue in some devices</li>
+          <li> Update gms package</li>
+          <li> Fix live captions download</li>
+          <li> Fix Cinematic motion photo package download</li>
+          <li> Replace MSDL haptics with native haptic feedback on brightness slider</li>
+          <li> Added Backup & Restore functionality in idlemanager</li>
+          <li> Fix essential notification and appspoof settings scroll issue</li>
+          <li> Add vanilla new prebuilts</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card anim d5">
+    <p class="section-heading">Installation</p>
+    <div class="warn-box" style="background:rgba(52,211,153,0.06);border-color:rgba(52,211,153,0.2);color:var(--success);">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+      <div><strong>Any AOSP Recovery</strong>You can use any AOSP-compatible recovery for this device. PBRP is just recommended.</div>
+    </div>
+    <div class="install-steps">
+      <div class="install-step"><div class="step-num" style="color:var(--success);">01</div>Use PBRP or any AOSP recovery.</div>
+      <div class="install-step"><div class="step-num" style="color:var(--success);">02</div>Flash BiTGApps separately for Vanilla variant.</div>
+      <div class="install-step"><div class="step-num" style="color:var(--success);">03</div>First boot may take 5–10 minutes. Do not interrupt.</div>
+    </div>
+  </div>
+</main>
 
   <!-- ═══════════ LUNARIS v3.11 STABLE ═══════════ -->
 <main id="lunaris-311" class="view">
@@ -1189,6 +1440,27 @@
         <div class="row-meta">Xiaomi · Codename: chime</div>
       </div>
       <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+
+    <div class="row-card axion-card anim d4" onclick="go('axion-rosemary-version-list-view')">
+      <img src="https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1666350336.46755940.png" alt="Redmi Note 10S" style="height:52px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+      <div class="row-content">
+        <div class="row-title">Redmi Note 10S</div>
+        <div class="row-meta">Xiaomi · Codename: rosemary</div>
+      </div>
+      <svg class="row-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </div>
+  </main>
+
+  <!-- ═══════════ AXION ROSEMARY VERSION LIST ═══════════ -->
+  <main id="axion-rosemary-version-list-view" class="view">
+    <div class="back-row anim"><button class="btn-back" onclick="go('axion-device-list-view')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> Devices</button></div>
+    <p class="page-label anim d1" style="color:var(--axion);">Redmi Note 10S</p>
+    <h1 class="page-title anim d1">Select Version</h1>
+    <p class="page-sub anim d2">Stable builds recommended.</p>
+
+    <div style="padding:20px;background:rgba(255,71,126,0.06);border:1px solid rgba(255,71,126,0.2);border-radius:12px;margin-top:20px;text-align:center;">
+      <p style="color:var(--muted);">AxionOS builds for this device coming soon!</p>
     </div>
   </main>
 
